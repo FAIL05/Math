@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" href ="{% static 'polls/css/index.css' %}">
+    <title>MATHQUEST</title>
+
+    
+ 
+</head>
+ 
+<body>
+
+    <div class="container">
+	 <img src="{% static 'polls/imagens/image.png' %}" width="320" height="250" />
+
+        <div class="logo">
+            <span>MATH</span>QUEST
+        </div>
+
+        <div class="buttons">
+            <a class="button" href="{% url 'polls:cadastro' %}">Criar uma conta</a>
+            <a class="button" href="{% url 'polls:login' %}">Entrar</a>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+</body>
+</html>
