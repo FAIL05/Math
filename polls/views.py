@@ -18,7 +18,8 @@ def login(request):
 def cadastro(request):
     return render(request, 'polls/cadastro.html')
 
-    
+def mathquest(request):
+    return render(request, 'polls/mathquest.html')
 
 
 
