@@ -21,5 +21,7 @@ def cadastro(request):
 def mathquest(request):
     return render(request, 'polls/mathquest.html')
 
+def matematica1ef(request):
+    return render(request, 'polls/matematica1ef.html')
 
 

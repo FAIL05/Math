@@ -1,55 +1,158 @@
-{% load static %}
+{%load static%}
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" href ="{% static 'polls/css/mathquest.css' %}">
-    <title>MathQuest - Aprenda Matemática de Forma Divertida</title>
-    
-</head>
-<body>
+<html>
 
-    <header>
-        <h1>MathQuest</h1>
-    </header>
-    <nav>
-        <a href="{% url 'polls:index' %}">Início</a>
-        <a href="#">Tópicos de estudos</a>
-        <a href="#">Sobre</a>
-        <a href="#">Perfil</a>
-    </nav>
-    <main>
-        <h2>Bem-vindo ao MathQuest!</h2>
-        <p>Seu portal para aprender matemática de maneira interativa e dinâmica. </p>
-        <p>Explore tópicos de estudo, faça quizzes e acompanhe seu progresso!</p>
-    </main>
-<div class="content">
-  <table>
-    <tr>
-      <th colspan="2">Matemática por ano</th>
-    </tr>
-    <tr>
-      <td>1º ano EF</td>
-      <td>6º ano EF</td>
-    </tr>
-    <tr>
-      <td>2º ano EF</td>
-      <td>7°ano EF</td>
-    </tr>
-    <tr>
-      <td>3º ano EF</td>
-      <td>8° ano EF</td>
-    </tr>
-    <tr>
-      <td>4° ano EF</td>
-      <td>9° ano EF</td>
-    </tr>
-    <tr>
-      <td>5° ano EF</td>
-      <td></td>
-    </tr>
-  </table>
-</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'polls/css/mathquest.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>MATHQUEST</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="title">
+      <h1>Tópicos de estudos</h1>
+    </div>
+    <div class="submit-line">
+      <input type="text" placeholder="Buscar..." />
+      <button class="submit-lente" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Tópicos de estudos</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li> <a href="#">Matemática EF: 1º Ano</a> </li>
+        <li> <a href="#">Matemática EF: 2º Ano</a> </li>
+        <li> <a href="#">Matemática EF: 3º Ano</a> </li>
+        <li> <a href="#">Matemática EF: 4º Ano</a> </li>
+        <li> <a href="#">Matemática EF: 5º Ano</a> </li>
+        <li> <a href="#">Matemática EF: 6º Ano</a> </li>
+        <li> <a href="#">Matemática EF: 7º Ano</a> </li>
+        <li> <a href="#">Matemática EF: 8º Ano</a> </li>
+        <li> <a href="#">Matemática EF: 9º Ano</a> </li>
+      </ul>
+    </div>
+
+
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="header2">
+          Matemática EF: 1º Ano
+        </div>
+        <div class="content">
+          <a href="#"> Conhecendo os números </a>
+          <br>
+          <a href="#"> Operações </a>
+          <br>
+          
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="header2">
+          Matemática EF: 2º Ano
+        </div>
+        <div class="content">
+          <a href="#"> Conhecendo os números </a>
+          <br>
+          <a href="#"> Operações </a>
+          <br>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="header2">
+          Matemática EF: 3º Ano
+        </div>
+        <div class="content">
+          <a href="#"> Conhecendo os números </a>
+          <br>
+          <a href="#"> Operações </a>
+          <br>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="header2">
+          Matemática EF: 4º Ano
+        </div>
+        <div class="content">
+          <a href="#"> Conhecendo os números </a>
+          <br>
+          <a href="#"> Operações </a>
+          <br>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="header2">
+          Matemática EF: 5º Ano
+        </div>
+        <div class="content">
+          <a href="#"> Conhecendo os números </a>
+          <br>
+          <a href="#"> Operações </a>
+          <br>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="header2">
+          Matemática EF: 6º Ano
+        </div>
+        <div class="content">
+          <a href="#"> Conhecendo os números </a>
+          <br>
+          <a href="#"> Operações </a>
+          <br>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="header2">
+          Matemática EF: 7º Ano
+        </div>
+        <div class="content">
+          <a href="#"> Conhecendo os números </a>
+          <br>
+          <a href="#"> Operações </a>
+          <br>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="header2">
+          Matemática EF: 8º Ano
+        </div>
+        <div class="content">
+          <a href="#"> Conhecendo os números </a>
+          <br>
+          <a href="#"> Operações </a>
+          <br>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="header2">
+          Matemática EF: 9º Ano
+        </div>
+        <div class="content">
+          <a href="#"> Conhecendo os números </a>
+          <br>
+          <a href="#"> Operações </a>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
 </body>
+
 </html>

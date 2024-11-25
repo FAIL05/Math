@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: black;
-     background-image: linear-gradient( to right, black, transparent, blue );
+     background-image: linear-gradient( to right, #5de0e6, transparent, #004aad );
     font-family: sans-serif;
 }
 
@@ -30,7 +30,7 @@ input {
 }
 
 button {
-    background-color: #e74c3c;
+    background-color: #004aad;
     color: white;
     padding: 12px 20px;
     margin-top: 20px;

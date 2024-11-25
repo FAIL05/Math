@@ -9,5 +9,6 @@ urlpatterns = [
     path("login", views.login, name="login"),
     path("cadastro", views.cadastro, name="cadastro"),
      path("mathquest", views.mathquest, name="mathquest"),
+     path("matematica1ef", views.matematica1ef, name="matematica1ef"),
 ]
 
