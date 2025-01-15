@@ -1,5 +1,3 @@
-from unittest import loader
-from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.db.models import F
@@ -17,7 +15,7 @@ def login(request):
 
 def cadastro(request):
     return render(request, 'polls/cadastro.html')
-
+    
 def mathquest(request):
     return render(request, 'polls/mathquest.html')
 

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{% static 'polls/css/cadastro.css' %}">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Criar uma conta</h1>
+        </div>
+
+        <form action="{% url 'usuarios:cadastro' %}" method="POST"> {% csrf_token %} {{ form.as_p }}
+            
+
+            <button type="submit" href="{% url 'polls:mathquest' %}" >ENTRAR </button>
+        </form>
+
+        <div class="signup">
+            <p>Já tem uma conta? <a href="{% url 'usuarios:login' %}">Entrar</a></p>
+        </div>
+    </div>
+</body>
+
+</html> 

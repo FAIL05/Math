@@ -12,7 +12,7 @@ body {
 
 .title h1 {
   margin-left: 50px;
-  font-family: ;
+  font-family: open sans-serif
 
 }
 
@@ -47,7 +47,6 @@ nav a {
 }
 
 .sidebar {
-  margin-top: 50px;
   /* Altura total da página */
   width: 20%;
   /* Largura inicial do menu (fechado) */
@@ -55,6 +54,7 @@ nav a {
   /* Cor de fundo escura */
   align-items: center;
   top: 0px;
+  box-shadow: 1px 50px #000000;
 }
 
 /* Links dentro da sidebar */
@@ -64,6 +64,9 @@ nav a {
   color: #000000;
   display: block;
 
+}
+.conjunto{
+  margin-top: 50px;
 }
 
 .topic-card {

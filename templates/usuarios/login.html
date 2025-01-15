@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel= "stylesheet" href ="{% static 'polls/css/login.css' %}">
+    
+</head>
+<body>
+    <div class="container_login">
+        <div class="logo">
+            <h1>Criar uma conta</h1>
+        </div>
+
+        <form action="{% url 'usuarios:login' %}" method="POST"> {% csrf_token %} {{ form.as_p }}
+            
+
+            <button type="submit">ENTRAR </button>
+        </form>
+
+        <div class="signup">
+            <p>Nâo tem uma conta? <a href="{% url 'usuarios:cadastro' %}">Entrar</a></p>
+        </div>
+    </div>
+    <!-- <div class="container_login">
+        <div class="logo">
+            <h1>Login</h1>
+        </div>
+
+        <form action="{% url 'usuarios:login' %}" method="POST"> {% csrf_token %} {{ form.as_p }}
+           
+                <a href="#">Esqueceu sua senha?</a>
+            </div>
+            <button type="submit">ENTRAR</button>
+        </form>
+
+        <div class="signup">
+            <p>Não tem uma conta? <a href="{% url 'polls:cadastro' %}">Crie uma conta</a></p>
+        </div>
+    </div> -->
+</body>
+</html>
