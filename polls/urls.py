@@ -12,6 +12,8 @@ urlpatterns = [
     path("cadastro", views.cadastro, name="cadastro"),
 
     path("mathquest", views.mathquest, name="mathquest"),
+
+    path("perfil", views.perfil, name="perfil"),
      
     path("matematica1ef", views.matematica1ef, name="matematica1ef"),
 ]

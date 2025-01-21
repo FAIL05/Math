@@ -1,0 +1,46 @@
+body {
+  font-family: open sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  background-color: #beb5b588;
+}
+
+.content {
+  background-color: #0b71aa;
+}
+
+.title h1 {
+  margin-left: 50px;
+  font-family: open sans-serif
+}
+
+.header {
+  color: white;
+  background-color: rgba(9, 9, 90, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+nav {
+  background-color: rgba(9, 9, 90, 1);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  word-spacing: 3px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  margin: 10px;
+}
+.container_perfil {
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+}

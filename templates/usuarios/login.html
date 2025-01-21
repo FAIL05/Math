@@ -16,11 +16,11 @@
         <form action="{% url 'usuarios:login' %}" method="POST"> {% csrf_token %} {{ form.as_p }}
             
 
-            <button type="submit">ENTRAR </button>
+            <button type="submit" href="{% url 'polls:mathquest' %}"> ENTRAR </button>
         </form>
 
         <div class="signup">
-            <p>Nâo tem uma conta? <a href="{% url 'usuarios:cadastro' %}">Entrar</a></p>
+            <p>Nâo tem uma conta? <a href="{% url 'usuarios:cadastro' %}">Criar</a></p>
         </div>
     </div>
     <!-- <div class="container_login">
