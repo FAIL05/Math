@@ -3,10 +3,16 @@ from .models import UsuarioPersonalizado
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 class UsuarioPersonalizadoCreationForm(UserCreationForm):
+    
     password2 = forms.CharField(
         label="Confirme sua senha",
         strip=False,
-        widget=forms.PasswordInput,
+        widget=forms.PasswordInput(
+            attrs={
+            'id':'password2',
+            }
+        )
+        
        
     )
     class Meta:

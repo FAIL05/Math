@@ -43,4 +43,22 @@ nav a {
   border-radius: 10px;
   text-align: center;
   width: 80%;
+  margin-left: 10% ;
+  display: block;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  font-family: open sans-serif;
+
+}
+.product-card-perfil {
+  padding: 10%;
+  text-align: left;
+  background-color: #ffffff;
+  font-size: 1.25em;
+  font-weight: normal;
+  display: block;
+  text-decoration: none;
+}
+.i{
+ display: block;
 }

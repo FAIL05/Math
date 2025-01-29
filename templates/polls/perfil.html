@@ -1,36 +1,51 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" href ="{% static 'polls/css/perfil.css' %}">
-    <title>Perfil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'polls/css/perfil.css' %}">
+  <title>Perfil</title>
 </head>
+
 <body>
-    <div class="header">
-        <div class="title">
-          <h1>Perfil</h1>
-        </div>
-
-        </div>
-
-
-      <nav>
-        <a href="#">Início</a>
-        <a href="#">Tópicos de estudos</a>
-        <a href="#">Sobre</a>
-        <a href="{% url 'polls:perfil' %}">Conta</a>
-      </nav>
-    <div class="container_perfil">
-        <div class="logo">
-            <h1> que bom te ver de volta ...</h1>
-        </div>
+  <div class="header">
+    <div class="title">
+      <h1>Perfil</h1>
     </div>
- 
+
+  </div>
+
+
+  <nav>
+    <a href="{% url 'polls:mathquest' %}">Tópicos de estudos</a>
+    <a href="#">Sobre</a>
+    <a href="{% url 'polls:perfil' %}">Perfil</a>
+  </nav>
+
+  <div class="container_perfil">
+    <img src="{% static 'polls/imagens/perfil.png' %}" width="150" height="150" />
+    <p>Bem-vindo(a): "EMAIL"</p>
+    <div class="product-card-perfil">
+
+      <a href="#">Alternar foto de perfil</a>
+      
+      <br>
+      <br>
+      <div class="icone_sair">
+        <i class="bi bi-box-arrow-right"></i>
+        <a href="{% url 'usuarios:sair' %}">Sair</a>
+      </div>
+
+
+      <div class="content">
+
+      </div>
+    </div>
+  </div>
+  </div>
+
 </body>
 
 </html>
-
-
-    

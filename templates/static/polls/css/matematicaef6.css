@@ -1,0 +1,134 @@
+body {
+    font-family: open sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    background-color: #f0ecec;
+}
+
+.content {
+    background-color: #0b71aa;
+}
+
+.title h1 {
+    margin-left: 50px;
+    font-family: open sans-serif
+}
+
+.header {
+    color: white;
+    background-color: rgba(9, 9, 90, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.header i {
+    font-size: 20px;
+    background-color: white;
+
+}
+
+nav {
+    background-color: rgba(9, 9, 90, 1);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    word-spacing: 3px;
+    /* transition: background-color 0.3s, transform 0.2s;
+    transform: scale(1.05); */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    transform: scale(1.05);
+
+}
+
+.sidebar {
+    /* Altura total da página */
+    width: 20%;
+    /* Largura inicial do menu (fechado) */
+    background-color: transparent;
+    /* Cor de fundo escura */
+    align-items: center;
+    top: 0px;
+    box-shadow: 1px 0 #000000;
+    margin-top: 50px;
+}
+
+/* Links dentro da sidebar */
+.sidebar a {
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+}
+
+.topic-card {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.topic-card ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.topic-card ul li {
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.greeting h1 {
+    font-family: open sans-serif;
+    font-weight: lighter;
+    font-size: 60px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.greeting a {
+    font-family: open sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    line-height: 0px;
+    margin-left: 40px;
+}
+
+
+.container {
+    display: flex;
+}
+
+
+.submit-lente {
+    font-size: small;
+    position: absolute;
+    top: 5px;
+    right: 14px;
+    z-index: 10;
+    border: none;
+    background: transparent;
+    outline: none;
+
+}
+
+.submit-line {
+    position: relative;
+    width: 330px;
+}
+
+.submit-line input {
+    padding: 8px;
+    border: 2px solid #293173;
+    border-radius: 20px;
+    width: 300px;
+    outline: none;
+}

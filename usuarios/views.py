@@ -1,7 +1,6 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from .forms import UsuarioPersonalizadoCreationForm, UsuarioPersonalizadoAuthenticationForm
 
 # Create your views here.
@@ -22,23 +21,7 @@ def cadastro(request):
 
     return render(request, 'usuarios/cadastro.html', {'form': form})
 
-        # print('Chegou aqui')
-        # nome= request.POST.get('nome')
-        # email= request.POST.get('email')
-        # senha= request.POST.get('senha')
- 
-
-        # user = User.objects.filter(username=nome).first()
-
-        # if user:
-        #     return HttpResponse('Já existe um usuario com esse nome')
-        
-
-        # user = User.objects.create_user(username=nome, email=email, password=senha)
-        # user.save()
-        
-        # return HttpResponse ('usuario cadastrado com sucesso')
-    
+     
 def login_usuario (request):
     if request.method == 'POST':
         form = UsuarioPersonalizadoAuthenticationForm(request, request.POST)
@@ -53,10 +36,10 @@ def login_usuario (request):
     else:
         form = UsuarioPersonalizadoAuthenticationForm()
         return render(request, 'usuarios/login.html', {'form': form})
-    # else: 
-    #     username = request.POST.get('username')
-    #     senha = request.POST.get('senha')
-        
+   
+def sair (request):
+    logout(request)
+    return redirect('usuarios:login')
        
 
 
