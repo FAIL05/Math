@@ -9,6 +9,11 @@ urlpatterns = [
 
     path("login", views.login, name="login"),
 
+    path('lista', views.IndexView.as_view(), name='lista'),
+    path('<int:pk>/', views.DetailView.as_view(), name='detalhe'),
+    path('<int:pk>/resultados/', views.ResultsViews.as_view(), name='resultados'),
+    path('<int:pergunta_id>/votar/', views.votar, name='votar'),
+
     path("cadastro", views.cadastro, name="cadastro"),
 
     path("mathquest", views.mathquest, name="mathquest"),
@@ -35,5 +40,6 @@ urlpatterns = [
 
     path("matematicaef9", views.matematicaef9, name="matematicaef9"),
     
+    path("password_reset_form", views.password_reset_form, name="password_reset_form"),
 ]
 

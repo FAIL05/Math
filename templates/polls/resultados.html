@@ -1,0 +1,27 @@
+{% extends 'polls/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="product-grid">
+    <div class="product-card">
+        <div class="header2">
+            Questões
+        </div>
+        <div class="content">
+            <div class="section">
+
+            <h1>{{ pergunta.texto_pergunta }}</h1>
+
+                <ul>
+                    {% for alternativa in pergunta.alternativa_set.all %}
+                        <li>{{ alternativa.texto_alternativa }} -- {{ alternativa.votos }} voto{{ alternativa.votos|pluralize }}</li>
+                    {% endfor %}
+                </ul>
+
+                <a href="{% url 'polls:detalhe' pergunta.id %}">Votar de novo?</a>
+            <br>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

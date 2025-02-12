@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'polls/css/perfil.css' %}">
+  <link rel="shortcut icon" type="imagex/png" href="{% static 'polls/imagens/icone.png'%}">
   <title>Perfil</title>
 </head>
 
@@ -22,6 +23,7 @@
     <a href="{% url 'polls:mathquest' %}">Tópicos de estudos</a>
     <a href="#">Sobre</a>
     <a href="{% url 'polls:perfil' %}">Perfil</a>
+    <a href="{% url 'polls:lista' %}">Quiz</a>
   </nav>
 
   <div class="container_perfil">

@@ -1,12 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel= "stylesheet" href ="{% static 'polls/css/login.css' %}">
-    
+    <link rel="stylesheet" href="{% static 'polls/css/login.css' %}">
+    <link rel="shortcut icon" type="imagex/png" href="{% static 'polls/imagens/icone.png'%}">
 </head>
+
 <body>
     <div class="container_login">
         <div class="logo">
@@ -14,30 +16,21 @@
         </div>
 
         <form action="{% url 'usuarios:login' %}" method="POST"> {% csrf_token %} {{ form.as_p }}
-            
+
 
             <button type="submit" href="{% url 'polls:mathquest' %}"> ENTRAR </button>
         </form>
-
+        <p>
+            {{custom_error}}
+        </p>
         <div class="signup">
             <p>Nâo tem uma conta? <a href="{% url 'usuarios:cadastro' %}">Criar</a></p>
         </div>
+        
+        <p><a href="{% url 'usuarios:password_reset' %}">Esqueceu sua senha?</a></p>
+        
     </div>
-    <!-- <div class="container_login">
-        <div class="logo">
-            <h1>Login</h1>
-        </div>
 
-        <form action="{% url 'usuarios:login' %}" method="POST"> {% csrf_token %} {{ form.as_p }}
-           
-                <a href="#">Esqueceu sua senha?</a>
-            </div>
-            <button type="submit">ENTRAR</button>
-        </form>
-
-        <div class="signup">
-            <p>Não tem uma conta? <a href="{% url 'polls:cadastro' %}">Crie uma conta</a></p>
-        </div>
-    </div> -->
 </body>
+
 </html>

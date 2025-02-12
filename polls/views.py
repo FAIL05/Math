@@ -1,8 +1,49 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.db.models import F
 from .models import Usuario
+from django.views import generic
+from django.utils import timezone
 from django.shortcuts import get_object_or_404, render
+
+from .models import Pergunta, Alternativa
+
+class IndexView(generic.ListView):
+    template_name = 'polls/lista.html'
+    context_object_name = 'lista_ultimas_perguntas'
+
+    def get_queryset(self):
+        return Pergunta.objects.filter(
+            data_publicacao__lte=timezone.now()
+        ).order_by('-data_publicacao')[:5]
+    
+class DetailView(generic.DetailView):
+    model = Pergunta
+    template_name = 'polls/detalhe.html'
+
+    def get_queryset(self):
+        return Pergunta.objects.filter(data_publicacao__lte=timezone.now())
+    
+class ResultsViews(generic.DetailView):
+    model = Pergunta
+    template_name = 'polls/resultados.html'
+
+def votar(request, pergunta_id):
+    pergunta = get_object_or_404(Pergunta, pk=pergunta_id)
+    try:
+        alternativa_selecionada = pergunta.alternativa_set.get(pk=request.POST['alternativa'])
+
+    except (KeyError, Alternativa.DoesNotExist):
+        return render (request, 'polls/detalhe.html', {
+            'pergunta': pergunta,
+            'error_message': "Você não selecionou nenhuma alternativa",
+        })
+    else:
+        alternativa_selecionada.votos += 1
+        alternativa_selecionada.save()
+        return HttpResponseRedirect(reverse('polls:resultados', args=(pergunta.id,)))
+        
 
 
 def index(request):
@@ -52,3 +93,6 @@ def matematicaef8(request):
 
 def matematicaef9(request):
     return render(request, 'polls/matematicaef9.html')
+
+def password_reset_form(request):
+    return render(request, 'polls/password_reset_form.html')

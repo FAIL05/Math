@@ -1,5 +1,5 @@
 body {
-  font-family: open sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
   font-size: 20px;
@@ -12,7 +12,7 @@ body {
 
 .title h1 {
   margin-left: 50px;
-  font-family: open sans-serif
+  font-family: sans-serif;
 }
 
 .header {
@@ -67,6 +67,7 @@ nav a {
 
 .conjunto {
   margin-top: 50px;
+  font-family: sans-serif;
 }
 
 .topic-card {
@@ -123,6 +124,7 @@ nav a {
   text-align: center;
   font-size: 1.25em;
   font-weight: normal;
+  font-family: sans-serif;
 }
 
 .submit-lente {

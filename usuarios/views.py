@@ -33,13 +33,16 @@ def login_usuario (request):
             if user is not None:
                 login(request, user)
                 return redirect('polls:mathquest')
+            
     else:
         form = UsuarioPersonalizadoAuthenticationForm()
-        return render(request, 'usuarios/login.html', {'form': form})
+    return render(request, 'usuarios/login.html', {'form': form})
    
 def sair (request):
     logout(request)
+
     return redirect('usuarios:login')
        
+
 
 
